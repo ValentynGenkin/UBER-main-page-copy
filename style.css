@@ -4,6 +4,8 @@
   font-family: 'Manrope', sans-serif;
 }
 
+/* Navigation */
+
 .nav-menu ul {
   padding: 0;
 }
@@ -14,6 +16,22 @@
   height: 40px;
   padding-top: 12px;
   padding-bottom: 12px;
+}
+
+.img-nav {
+  position: relative;
+  bottom: -3px;
+  width: 16px;
+  padding: 0;
+  margin-right: 7px;
+}
+
+.img-nav-arrow {
+  position: relative;
+  bottom: -3px;
+  width: 16px;
+  padding: 0;
+  margin-left: 7px;
 }
 
 #signup-button {
@@ -28,39 +46,47 @@
   font-size: 14px;
 }
 
+.hover:hover {
+  background-color: rgb(99, 99, 99);
+  border: 8px solid rgb(99, 99, 99);
+  border-radius: 30px;
+}
+
 .menu-block {
-  max-width: 1400px;
+  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
-  display:  flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.menu-r {
-  padding-right: 64px;
-}
-
-.menu-l {
   padding-left: 64px;
+  padding-right: 64px;
+  display:  flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 .logo-nav {
   font-size: 24px;
 }
 
+.hidden img {
+  display: none;
+}
+
 ul.right-menu li {
   display: inline;
   list-style-type: none;
   font-size: 14px;
-  padding-left: 30px;
+  margin-left: 10px;
+  border: 8px solid transparent;
+  border-radius: 30px;
 }
 
 ul.left-menu li {
   display: inline;
   list-style-type: none;
-  padding-right: 30px;
   font-size: 14px;
+  margin-right: 10px;
+  border: 8px solid transparent;
+  border-radius: 30px;
 }
 
 ul.left-menu a {
@@ -74,15 +100,20 @@ ul.right-menu a {
   color: white;
 }
 
+/* Main background */
+
 .main-screen {
   background-image: url(./images/back.jpeg);
   position: relative;
   height: 667px; 
-  width: 100vw;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
+
+/* Main offer */
 
 .main-screen-block {
   display: block;
@@ -94,7 +125,7 @@ ul.right-menu a {
 
 .container-1 {
   display: flex;
-  width: 1200px;
+  max-width: 1200px;
   height: 100%;
   justify-content: start;
   align-items: center;
@@ -117,6 +148,15 @@ ul.right-menu a {
   width: 100px;
   text-align: center;
   font-size: 14px;
+  border-bottom: 4px solid transparent;
+}
+
+.drive-buttom {
+  border-bottom: 4px solid black;
+}
+
+.tablist-top-button:hover {
+  border-bottom: 4px solid black;
 }
 
 .tablist-top-button img {
@@ -139,8 +179,6 @@ ul.right-menu a {
   font-size: 52px;
   font-weight: 800;
 }
-
-
 
 a.sigh-driver-button {
   width: 140px;
@@ -172,11 +210,13 @@ a.sigh-driver-button {
   align-items: center;
 }
 
+/* Uber for Business */
+
 .strip-block {
   background-image: url(./images/back2.jpg);
   opacity: 0.4;
   height: 300px;
-  width: 100vw;
+  width: 100%;
   position: absolute;
   background-position: center;
   background-repeat: no-repeat;
@@ -191,7 +231,7 @@ a.sigh-driver-button {
 }
 
 .strip {
-  width: 1200px;
+  max-width: 1200px;
   height: 172px;
   display: flex;
   flex-direction: column;
@@ -221,6 +261,8 @@ a.sigh-driver-button {
   border-radius: 10px;
 }
 
+/* Safety Block */
+
 .safety {
   max-width: 1200px;
   margin: 0 auto;
@@ -236,7 +278,7 @@ a.sigh-driver-button {
 .safety-block {
   display: flex;
   max-width: 1200px;
-  height: 600px;
+
   justify-content: center;
   align-items: center;
   gap: 36px;
@@ -282,7 +324,6 @@ a.sigh-driver-button {
 .safety-bottom {
   display: flex;
   max-width: 1200px;
-  height: auto;
   margin: 0 auto;
   justify-content: space-between;
   gap: 20px;
@@ -295,7 +336,6 @@ a.sigh-driver-button {
   width: 360px;
   height: 192px;
   margin-bottom: 100px;
-
 }
 
 .safety-bottom-box img {
@@ -308,12 +348,12 @@ a.sigh-driver-button {
 }
 
 .safety-bottom-box span {
-display: inline-block;
-padding-bottom: 5px;
-text-decoration: none;
-color: black;
-font-size: 16px;
-border-bottom: 1px solid rgb(196, 195, 195);
+  display: inline-block;
+  padding-bottom: 5px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  border-bottom: 1px solid rgb(196, 195, 195);
 }
 
 .safety-bottom-box p {
@@ -322,13 +362,22 @@ border-bottom: 1px solid rgb(196, 195, 195);
 
 @media screen and (max-width:1024px) and (min-width: 600px) {
 
+  .nav-hidden a {
+    display: none;
+  }
+
+  .hidden img {
+    display: inline;
+  }
+
   .main-screen-block {
     width: 100%;
     height: 420px;
   }
-  .tablist {
+  .container-1 {
     width: 100%;
     justify-content: flex-start;
+    align-items: flex-start;
   }
   .sigh-driver-block {
     width: 100%;
@@ -336,60 +385,84 @@ border-bottom: 1px solid rgb(196, 195, 195);
     justify-content: flex-start;
   }
 
-  .container-1 {
-    align-items: flex-start;
-  }
-
   .sigh-driver {
     width: 100vw;
     flex-wrap: wrap;
   }
+
+  .safety {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .strip {
+    margin-left: 10px;
+  }
+  
   
 }
 
 @media screen and (max-width:600px) {
+
+  .nav-hidden a {
+    display: none;
+  }
   
+  .hidden img {
+    display: inline;
+  }
+
+  .strip {
+    margin-left: 10px;
+  }
+
   .main-screen-block {
     width: 100%;
-    height: 420px;
+    height: 520px;
   }
-  .tablist {
+  .container-1 {
     width: 100%;
     justify-content: flex-start;
+    align-items: flex-start;
   }
   .sigh-driver-block {
     width: 100%;
-    height: 290px;
+    height: 390px;
     justify-content: flex-start;
-  }
-
-  .container-1 {
-    align-items: flex-start;
   }
 
   .sigh-driver {
     width: 100vw;
+    height: 404px;
     flex-wrap: wrap;
+  }
+
+  .safety {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .safety-block {
     flex-wrap: wrap;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
   }
 
   .safety-bottom {
-    margin-top: 100px;
+    margin-top: 70px;
     flex-wrap: wrap;
     gap: 0;
   }
 
   .safety-bottom-box {
-    margin: 10px;
+    margin-bottom: 40px;
   }
 
-  .news {
-    display: flex;
-    flex-direction: column;
+  .menu-block {
+    padding: 0;
   }
 
+  .menu-r {
+    margin-left: -129px;
+  }
 }
