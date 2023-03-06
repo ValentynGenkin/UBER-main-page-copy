@@ -275,10 +275,13 @@ a.sigh-driver-button {
   font-size: 36px;
 }
 
+.safety-h2 {
+  margin-bottom: 20px;
+}
+
 .safety-block {
   display: flex;
-  max-width: 1200px;
-
+  max-width: 1200px;  
   justify-content: center;
   align-items: center;
   gap: 36px;
@@ -360,6 +363,8 @@ a.sigh-driver-button {
   font-size: 16px;
 }
 
+/* FOOTER */
+
 footer {
   background-color: black;
 }
@@ -367,11 +372,14 @@ footer {
 .footer-block {
   max-width: 1200px;
   margin: 0 auto;
+  padding-top: 100px;
 }
 
 .how-it-work {
-  text-align: right;
+  margin-top: -50px;
+  font-size: 14px;
 }
+
 .how-it-work a {
   text-decoration: none;
   color: white;
@@ -379,6 +387,18 @@ footer {
 
 .footer-logo {
   color: white;
+  margin-bottom: 30px;
+  margin-left: 10px;
+
+}
+
+.footer-logo p {
+  font-size: 24px;
+}
+
+.help-center {
+  margin-left: 10px;
+  margin-bottom: 30px;
 }
 
 .help-center a {
@@ -389,48 +409,129 @@ footer {
 .footer-links li a {
   text-decoration: none;
   color: white;
+  font-size: 14px;
 }
 
 .footer-links ul {
   list-style-type: none;
+  width: 260px;
+  flex-wrap: wrap;
+  margin: 10px;
 }
 
 .terms-left {
-  color: White;
+  color: grey;
 }
 
 .terms-right a {
   text-decoration: none;
-  color: white;
+  color: grey;
+  padding-left: 30px;
 }
 
 .footer-top {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 150px;
+  margin-top: 50px;
+
 }
 
-
-.footer-links ul {
-  min-width: 130px;
-  width: 150px;
-  flex-wrap: wrap;
+.footer-links li p {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 18px;
 }
 
+.footer-links li {
+  margin-bottom: 16px;
+}
 
+.hover-footer:hover {
+  color: grey;
+}
 
+.media-location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
 
+.location ul {
+  list-style: none;
+}
 
+.location li {
+  display: inline-block;
+  padding: 12px;
+  border-radius: 8px;
+}
 
+.location li:hover {
+  background-color: rgb(99, 99, 99) ;
+}
 
+.location li a {
+  text-decoration: none;
+  color: white;
+}
 
+.location img {
+  width: 16px;
+  position: relative;
+  top: 2px;
+  margin-right: 12px;
+}
 
+.social-media {
+  display: flex;
+}
+
+.social-media a {
+  display: inline-block;
+  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  margin-right: 64px;
+}
+
+.social-media a:hover {
+  background-color: rgb(99, 99, 99);
+}
+
+.social-media img {
+  position: relative;
+  left: 16px;
+  top: 16px;
+  width: 16px;
+}
+
+.app-download img {
+  width: 128px;
+  padding: 4px;
+ }
+
+.app-download {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+} 
+
+.terms {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 100px;
+  font-size: 12px;
+}
 
 
 @media screen and (max-width:1024px) and (min-width: 600px) {
@@ -468,11 +569,52 @@ footer {
     margin-right: 10px;
   }
 
+
+
   .strip {
     margin-left: 10px;
   }
+
+  .footer-block {
+    margin: 10px;
+  }
   
+  .footer-top {
+    display: block;
+  }
   
+  .how-it-work {
+    margin-top: 0;
+  }
+
+  .how-it-work a {
+    margin-left: 10px;
+  }
+
+  .media-location {
+    display: block;
+  }
+  
+  .location {
+    margin-top: 30px;
+  }
+
+  .location li {
+    display: block;
+  }
+
+  .terms {
+    display: block;
+  }
+
+  .terms-right {
+    margin-top: 50px;
+  }
+
+  .terms-right a{
+    padding-left: 0;
+    padding-right: 30px;
+  }
 }
 
 @media screen and (max-width:600px) {
@@ -537,5 +679,50 @@ footer {
 
   .menu-r {
     margin-left: -129px;
+  }
+
+  .footer-block {
+    margin: 10px;
+  }
+  
+  .footer-top {
+    display: block;
+  }
+  
+  .how-it-work {
+    margin-top: 0;
+  }
+
+  .how-it-work a {
+    margin-left: 10px;
+  }
+
+  .media-location {
+    display: block;
+  }
+  
+  .location {
+    margin-top: 30px;
+  }
+
+  .location li {
+    display: block;
+  }
+
+  .terms {
+    display: block;
+  }
+
+  .terms-right {
+    margin-top: 50px;
+  }
+
+  .terms-right a{
+    padding-left: 0;
+    padding-right: 30px;
+  }
+
+  .social-media a {
+    margin-right: 30px;
   }
 }
