@@ -121,7 +121,19 @@ ul.right-menu a {
   background-color: rgb(255, 255, 255);
   width: 576px;
   height: 539px;
+  animation: slideInFromLeft 1s ease-in;
 }
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 
 .container-1 {
   display: flex;
@@ -187,6 +199,12 @@ a.sigh-driver-button {
   background-color: black;
   border: 12px solid black;
   border-radius: 10px;
+  transition: transform 0.2s ease-in;
+  box-shadow: 0 0 6px 1px  grey;
+}
+
+a.sigh-driver-button:hover {
+  transform: translateY(-5px);
 }
 
 .sigh-driver span {
